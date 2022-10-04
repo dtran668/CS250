@@ -56,7 +56,7 @@ int main()
          << "Result Backwards: ";
     myList.printReverse(); */
 
-    // TEST CASE FOR QUESTION #37
+    /* // TEST CASE FOR QUESTION #37
     cout << "TEST CASE FOR QUESTION #37:\n"
          << "Calling List: 8 9 4 2 5\n"
          << "Parameter List: 16 12 11 13 10\n"
@@ -75,7 +75,7 @@ int main()
     otherList.printForward();
     
     cout << "\nResult Parameter List backward: ";
-    otherList.printReverse();
+    otherList.printReverse(); */
 
     /* // TEST CASE FOR QUESTION #79
     cout << "TEST CASE FOR QUESTION #79:\n"
@@ -90,6 +90,27 @@ int main()
     myList.printForward();
     cout << "\nParameter List: ";
     otherList.printForward(); */
+
+    DoublyList emptyList;
+
+    int arr[7] =  { 4, 9, 11, 5, 6, 13, 1 };
+    int numOfElements = 7;
+
+    // TEST CASE FOR QUESTION #81
+    cout << "TEST CASE FOR QUESTION #81:\n"
+        << "Calling List is empty...\n"
+        << "Copy array elements into calling list...\n"
+        << "Parameter Array: 4 9 11 5 6 13 1\n"
+        << "Expected: \nCalling List: 4 9 11 5 6 13 1\n";
+    cout << "\nResult:";
+    emptyList.copyArrToList( arr, numOfElements );
+
+    cout << "\nResult Calling List foward: ";
+    emptyList.printForward();
+
+    cout << "\nResult Calling list backward: ";
+    emptyList.printReverse();
+
 
     cout << "\n"
          << endl;

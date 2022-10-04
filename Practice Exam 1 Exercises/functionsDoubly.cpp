@@ -120,3 +120,44 @@ void DoublyList::swapLists( DoublyList& compareList )
    last = compareList.last;
    compareList.last = tempNode;
 }
+
+// 81. Given an empty calling object, copy one or more elements
+// of the array into the calling object.
+void DoublyList::copyArrToList( int arr[] , int numOfElements )
+{
+    if( numOfElements == 0 )
+    {
+        cout << "Array is empty.\n";
+    }
+    else if( numOfElements == 1 )
+    {
+        first = new Node( arr[0], nullptr, nullptr );
+        last = first;
+    }
+    else if( numOfElements == 2 )
+    {
+        first = new Node( arr[0], nullptr, nullptr );
+        last = new Node( arr[1], first, nullptr );
+        first->setNext( last );
+    }
+    else
+    {
+        first = new Node( arr[0], nullptr, nullptr );
+        first->setNext( new Node( arr[1], first, nullptr ) );
+        
+        Node *current = first->getNext();
+        Node *trailCurrent = first;
+
+        for( int i = 2; i < numOfElements; ++i )
+        {
+            trailCurrent->setNext( current);
+            trailCurrent = current;
+
+            current->setNext( new Node( arr[i], trailCurrent , nullptr ) );
+
+            current = current->getNext();
+
+            last = current;
+        }
+    }
+}
