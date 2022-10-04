@@ -156,8 +156,9 @@ void DoublyList::copyArrToList( int arr[] , int numOfElements )
             current->setNext( new Node( arr[i], trailCurrent , nullptr ) );
 
             current = current->getNext();
-
-            last = current;
         }
+        last = current;
     }
+    
+    count = numOfElements;
 }
