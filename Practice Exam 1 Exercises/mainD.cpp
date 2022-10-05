@@ -4,6 +4,8 @@ using namespace std;
 
 int main()
 {
+     DoublyList emptyList;
+
     DoublyList myList;
 
     myList.insertFront(5);
@@ -56,7 +58,7 @@ int main()
          << "Result Backwards: ";
     myList.printReverse(); */
 
-    /* // TEST CASE FOR QUESTION #37
+    // TEST CASE FOR QUESTION #37
     cout << "TEST CASE FOR QUESTION #37:\n"
          << "Calling List: 8 9 4 2 5\n"
          << "Parameter List: 16 12 11 13 10\n"
@@ -75,8 +77,64 @@ int main()
     otherList.printForward();
     
     cout << "\nResult Parameter List backward: ";
+    otherList.printReverse();
+
+    /* // TEST CASE FOR QUESTION #45
+    cout << "TEST CASE FOR QUESTION #45:\n"
+         << "Calling List: 8 9 4 2 5\n"
+         << "Parameter List: 16 12 11 13 10\n"
+         << "Swap the second calling node with first parameter node...\n\n"
+         << "Expected Calling List: 8 16 4 2 5\n";
+    myList.swapSecondNodeCallingFirstNodeParam(otherList);
+
+    cout << "Result Calling List foward: ";
+    myList.printForward();
+
+    cout << "\nResult Calling list backward: ";
+    myList.printReverse();
+
+    cout << "\n\nExpected Parameter List: 9 12 11 13 10\n"
+         << "Result Parameter List forward: ";
+    otherList.printForward();
+    
+    cout << "\nResult Parameter List backward: ";
     otherList.printReverse(); */
 
+    /* // TEST CASE FOR QUESTION #73
+    cout << "TEST CASE FOR QUESTION #73:\n"
+        << "Calling List:\n"
+        << "Parameter List: 16 12 11 13 10\n"
+        << "Copying elements of parameter list to calling list..\n\n"
+        << "Expected Calling List: 16 12 11 13 10\n";
+    emptyList.copyParamToCalling( otherList );
+
+    cout << "Result Calling List foward: ";
+    emptyList.printForward();
+
+    cout << "\nResult Calling list backward: ";
+    emptyList.printReverse(); */
+
+    /* // TEST CASE FOR QUESTION #77
+    cout << "TEST CASE FOR QUESTION #77:\n"
+         << "Calling List: 8 9 4 2 5\n"
+         << "Parameter List: 16 12 11 13 10\n"
+         << "Append elements of calling list to parameter list...\n\n"
+         << "Expected Calling List: 8 9 4 2 5\n";
+    myList.addCallingToParam(otherList);
+
+    cout << "Result Calling List foward: ";
+    myList.printForward();
+
+    cout << "\nResult Calling list backward: ";
+    myList.printReverse();
+
+    cout << "\n\nExpected Parameter List: 16 12 11 13 10 8 9 4 2 5\n"
+         << "Result Parameter List forward: ";
+    otherList.printForward();
+    
+    cout << "\nResult Parameter List backward: ";
+    otherList.printReverse();
+ */
     /* // TEST CASE FOR QUESTION #79
     cout << "TEST CASE FOR QUESTION #79:\n"
         << "Calling List: 8 9 4 2 5\n"
@@ -91,12 +149,10 @@ int main()
     cout << "\nParameter List: ";
     otherList.printForward(); */
 
-    DoublyList emptyList;
-
     int arr[7] =  { 4, 9, 11, 5, 6, 13, 1 };
     int numOfElements = 7;
 
-    // TEST CASE FOR QUESTION #81
+    /* // TEST CASE FOR QUESTION #81
     cout << "TEST CASE FOR QUESTION #81:\n"
         << "Calling List is empty...\n"
         << "Copy array elements into calling list...\n"
@@ -109,7 +165,7 @@ int main()
     emptyList.printForward();
 
     cout << "\nResult Calling list backward: ";
-    emptyList.printReverse();
+    emptyList.printReverse(); */
 
 
     cout << "\n"

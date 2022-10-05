@@ -38,14 +38,26 @@ void deleteFirstNode();
 // #18
 void swapFirstLastNodes();
 
-// 37
+// #37
 void swapFirstNodes( DoublyList& );
+
+// #45
+void swapSecondNodeCallingFirstNodeParam( DoublyList& );
+
+// #73
+void copyParamToCalling( DoublyList& );
+
+// #77
+void addCallingToParam( DoublyList& );
 
 // #79
 void swapLists( DoublyList& );
 
 // #39
 void swapFirstCallNodeLastParamNode( DoublyList& );
+
+// #81
+void copyArrToList( int arr[], int numOfElements);
 
 ~DoublyList();
 private:

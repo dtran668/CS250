@@ -66,7 +66,7 @@ int main()
     cout << "Result: ";
     myList.print(); */
 
-    // TEST CASE FOR QUESTION #7
+    /* // TEST CASE FOR QUESTION #7
     cout << "TEST CASE FOR QUESTION #7:\n"
         << "Current List: 8 9 4 2\n"
         << "Delete first node in list...\n"
@@ -74,7 +74,7 @@ int main()
     myList.deleteFirstNode();
     cout << "Result: ";
     myList.print();
-
+ */
     /* // TEST CASE FOR QUESTION #8
     cout << "TEST CASE FOR QUESTION #8:\n"
         << "Current List: 8 9 4 2\n"
@@ -247,7 +247,7 @@ int main()
     otherList.insertFront(12);
     otherList.insertFront(16);
 
-    /* // TEST CASE FOR QUESTION #37
+    // TEST CASE FOR QUESTION #37
     cout << "TEST CASE FOR QUESTION #37:\n"
         << "Calling List: 8 9 4 2\n"
         << "Parameter List: 16 12 11 13 10\n"
@@ -259,7 +259,7 @@ int main()
     cout << "Calling List: ";
     myList.print();
     cout << "\nParameter List: ";
-    otherList.print(); */
+    otherList.print();
 
     /* // TEST CASE FOR QUESTION #38
     cout << "TEST CASE FOR QUESTION #38:\n"

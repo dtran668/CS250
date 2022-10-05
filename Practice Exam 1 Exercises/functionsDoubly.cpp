@@ -102,6 +102,97 @@ void DoublyList::swapFirstCallNodeLastParamNode( DoublyList& otherList )
     }
 }
 
+// 45. Swap the second node of the calling object with the first node of the parameter object.
+void DoublyList::swapSecondNodeCallingFirstNodeParam( DoublyList& parameterList )
+{
+    if( count < 2 || parameterList.count < 1 )
+    {
+        cerr << "One of the lists is too small.\n";
+    }
+    else
+    {
+        Node *callingSecondNodeTemp = first->getNext();
+        Node *callingSecondNodeHead = first->getNext()->getNext();
+        Node *parameterFirstNodeHead = parameterList.first->getNext();
+
+        first->setNext( parameterList.first );
+        first->getNext()->setNext( callingSecondNodeHead );
+        first->getNext()->setPrev( first );
+        callingSecondNodeHead->setPrev( first->getNext() );
+
+        parameterList.first = callingSecondNodeTemp;
+        parameterList.first->setNext( parameterFirstNodeHead );
+        parameterList.first->setPrev( nullptr );
+        parameterFirstNodeHead->setPrev( parameterList.first );
+        
+
+        /* Node *callingSecondNode = first->getNext();
+        Node *callingSecondNodeHead = callingSecondNode->getNext();
+
+        Node *parameterFirstNode = parameterList.first;
+        Node *parameterFirstNodeHead = parameterList.first->getNext();
+
+        Node *temp = callingSecondNode;
+        callingSecondNode = parameterFirstNode;
+        parameterList.first = temp;
+
+        cout << "\n*************" << callingSecondNodeHead->getData() << "************" << endl;
+        callingSecondNode->setNext( callingSecondNodeHead );
+        parameterList.first->setNext( parameterFirstNodeHead ); */
+
+
+    }
+}
+
+// 73. Given an empty calling object, copy one or more elements
+// of the parameter object into the calling object.
+void DoublyList::copyParamToCalling( DoublyList& parameterList )
+{
+    if( parameterList.count == 0 )
+    {
+        cerr << "The parameter list is empty.\n";
+    }
+    else
+    {
+        first = new Node( parameterList.first->getData(), nullptr, nullptr );
+        last = first;
+
+        if( parameterList.count > 1 )
+        {
+            Node *current = first;
+            Node *parameterCurrent = parameterList.first->getNext();
+            for( int i = 0; i < parameterList.count - 1; ++i )
+            {
+                current->setNext( new Node( parameterCurrent->getData(), current, nullptr) );
+                current->getNext()->setPrev( current );
+
+                current = current->getNext();
+                parameterCurrent = parameterCurrent->getNext();
+            }
+
+            last = current;
+        }
+
+        count = parameterList.count;
+    }
+}
+
+// 77. Given a non-empty calling object and a non-empty parameter object, append (add to the end) one or more
+// elements of the calling object to the end of the parameter object.
+void DoublyList::addCallingToParam( DoublyList& parameterList )
+{
+    Node *current = first;
+    for( int i = 0; i < count; ++i )
+    {
+        parameterList.last = new Node( current->getData(), parameterList.last, nullptr );
+        parameterList.last->getPrev()->setNext( parameterList.last ); //connect pointer forward
+
+        current = current->getNext();
+    }
+
+    parameterList.count += count;
+}
+
 // 79. Swap calling object and parameter object. Think how to implement this one efficiently without any loops.
 void DoublyList::swapLists( DoublyList& compareList )
 {
@@ -129,20 +220,9 @@ void DoublyList::copyArrToList( int arr[] , int numOfElements )
     {
         cout << "Array is empty.\n";
     }
-    else if( numOfElements == 1 )
-    {
-        first = new Node( arr[0], nullptr, nullptr );
-        last = first;
-    }
-    else if( numOfElements == 2 )
-    {
-        first = new Node( arr[0], nullptr, nullptr );
-        last = new Node( arr[1], first, nullptr );
-        first->setNext( last );
-    }
     else
     {
-        first = new Node( arr[0], nullptr, nullptr );
+        /* first = new Node( arr[0], nullptr, nullptr );
         first->setNext( new Node( arr[1], first, nullptr ) );
         
         Node *current = first->getNext();
@@ -156,9 +236,29 @@ void DoublyList::copyArrToList( int arr[] , int numOfElements )
             current->setNext( new Node( arr[i], trailCurrent , nullptr ) );
 
             current = current->getNext();
+
+            last = current;
+        } */ 
+
+
+        // Second version: more compact and efficient
+        first = new Node( arr[0], nullptr, nullptr );
+        last = first;
+
+        if( numOfElements > 1 )
+        {
+            Node *current = first;
+            for( int i = 1; i < numOfElements; ++i )
+            {
+                current->setNext( new Node( arr[i], current, nullptr ) );
+
+                current = current->getNext();
+            }
+
+            last = current;
         }
-        last = current;
+
+        count = numOfElements;
     }
-    
-    count = numOfElements;
 }
+
