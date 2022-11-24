@@ -1,0 +1,67 @@
+﻿  Course.cpp
+C:\Users\dtran668\Desktop\Course.h(23,30): error C2061: syntax error: identifier 'string'
+C:\Users\dtran668\Desktop\Course.h(28,8): error C2143: syntax error: missing ';' before '&'
+C:\Users\dtran668\Desktop\Course.h(28,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\dtran668\Desktop\Course.h(28,31): error C2238: unexpected token(s) preceding ';'
+C:\Users\dtran668\Desktop\Course.h(34,5): error C2143: syntax error: missing ';' before '<'
+C:\Users\dtran668\Desktop\Course.h(34,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\dtran668\Desktop\Course.h(34,36): error C2238: unexpected token(s) preceding ';'
+C:\Users\dtran668\Desktop\Course.h(41,22): error C2061: syntax error: identifier 'string'
+C:\Users\dtran668\Desktop\Course.cpp(18,9): error C2511: 'Course::Course(int,std::string,int,std::set<int,std::less<int>,std::allocator<int>>)': overloaded member function not found in 'Course'
+C:\Users\dtran668\Desktop\Course.h(15): message : see declaration of 'Course'
+C:\Users\dtran668\Desktop\Course.cpp(21,2): error C2597: illegal reference to non-static member 'Course::courseNumber'
+C:\Users\dtran668\Desktop\Course.h(53): message : see declaration of 'Course::courseNumber'
+C:\Users\dtran668\Desktop\Course.cpp(22,2): error C2597: illegal reference to non-static member 'Course::courseName'
+C:\Users\dtran668\Desktop\Course.h(54): message : see declaration of 'Course::courseName'
+C:\Users\dtran668\Desktop\Course.cpp(23,2): error C2597: illegal reference to non-static member 'Course::courseUnits'
+C:\Users\dtran668\Desktop\Course.h(55): message : see declaration of 'Course::courseUnits'
+C:\Users\dtran668\Desktop\Course.cpp(24,2): error C2597: illegal reference to non-static member 'Course::prereqs'
+C:\Users\dtran668\Desktop\Course.h(56): message : see declaration of 'Course::prereqs'
+C:\Users\dtran668\Desktop\Course.cpp(34,17): error C2039: 'getCourseName': is not a member of 'Course'
+C:\Users\dtran668\Desktop\Course.h(15): message : see declaration of 'Course'
+C:\Users\dtran668\Desktop\Course.cpp(35,1): error C2270: 'getCourseName': modifiers not allowed on nonmember functions
+C:\Users\dtran668\Desktop\Course.cpp(36,9): error C2065: 'courseName': undeclared identifier
+C:\Users\dtran668\Desktop\Course.cpp(46,19): error C2039: 'getCoursePrereqs': is not a member of 'Course'
+C:\Users\dtran668\Desktop\Course.h(15): message : see declaration of 'Course'
+C:\Users\dtran668\Desktop\Course.cpp(47,1): error C2270: 'getCoursePrereqs': modifiers not allowed on nonmember functions
+C:\Users\dtran668\Desktop\Course.cpp(48,9): error C2065: 'prereqs': undeclared identifier
+C:\Users\dtran668\Desktop\Course.cpp(54,13): error C2440: 'return': cannot convert from 'const Course *' to 'Course &'
+C:\Users\dtran668\Desktop\Course.cpp(58,23): error C2724: 'Course::getPrefix': 'static' should not be used on member functions defined at file scope
+C:\Users\dtran668\Desktop\Course.cpp(64,14): error C2511: 'void Course::setCourseName(std::string)': overloaded member function not found in 'Course'
+C:\Users\dtran668\Desktop\Course.h(15): message : see declaration of 'Course'
+C:\Users\dtran668\Desktop\Course.cpp(66,2): error C2597: illegal reference to non-static member 'Course::courseName'
+C:\Users\dtran668\Desktop\Course.h(54): message : see declaration of 'Course::courseName'
+  Main.cpp
+C:\Users\dtran668\Desktop\Course.h(23,30): error C2061: syntax error: identifier 'string'
+C:\Users\dtran668\Desktop\Course.h(28,8): error C2143: syntax error: missing ';' before '&'
+C:\Users\dtran668\Desktop\Course.h(28,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\dtran668\Desktop\Course.h(28,31): error C2238: unexpected token(s) preceding ';'
+C:\Users\dtran668\Desktop\Course.h(34,5): error C2143: syntax error: missing ';' before '<'
+C:\Users\dtran668\Desktop\Course.h(34,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\dtran668\Desktop\Course.h(34,36): error C2238: unexpected token(s) preceding ';'
+C:\Users\dtran668\Desktop\Course.h(41,22): error C2061: syntax error: identifier 'string'
+C:\Users\dtran668\Desktop\Course.cpp(18,9): error C2511: 'Course::Course(int,std::string,int,std::set<int,std::less<int>,std::allocator<int>>)': overloaded member function not found in 'Course'
+C:\Users\dtran668\Desktop\Course.h(15): message : see declaration of 'Course'
+C:\Users\dtran668\Desktop\Course.cpp(21,2): error C2597: illegal reference to non-static member 'Course::courseNumber'
+C:\Users\dtran668\Desktop\Course.h(53): message : see declaration of 'Course::courseNumber'
+C:\Users\dtran668\Desktop\Course.cpp(22,2): error C2597: illegal reference to non-static member 'Course::courseName'
+C:\Users\dtran668\Desktop\Course.h(54): message : see declaration of 'Course::courseName'
+C:\Users\dtran668\Desktop\Course.cpp(23,2): error C2597: illegal reference to non-static member 'Course::courseUnits'
+C:\Users\dtran668\Desktop\Course.h(55): message : see declaration of 'Course::courseUnits'
+C:\Users\dtran668\Desktop\Course.cpp(24,2): error C2597: illegal reference to non-static member 'Course::prereqs'
+C:\Users\dtran668\Desktop\Course.h(56): message : see declaration of 'Course::prereqs'
+C:\Users\dtran668\Desktop\Course.cpp(34,17): error C2039: 'getCourseName': is not a member of 'Course'
+C:\Users\dtran668\Desktop\Course.h(15): message : see declaration of 'Course'
+C:\Users\dtran668\Desktop\Course.cpp(35,1): error C2270: 'getCourseName': modifiers not allowed on nonmember functions
+C:\Users\dtran668\Desktop\Course.cpp(36,9): error C2065: 'courseName': undeclared identifier
+C:\Users\dtran668\Desktop\Course.cpp(46,19): error C2039: 'getCoursePrereqs': is not a member of 'Course'
+C:\Users\dtran668\Desktop\Course.h(15): message : see declaration of 'Course'
+C:\Users\dtran668\Desktop\Course.cpp(47,1): error C2270: 'getCoursePrereqs': modifiers not allowed on nonmember functions
+C:\Users\dtran668\Desktop\Course.cpp(48,9): error C2065: 'prereqs': undeclared identifier
+C:\Users\dtran668\Desktop\Course.cpp(54,13): error C2440: 'return': cannot convert from 'const Course *' to 'Course &'
+C:\Users\dtran668\Desktop\Course.cpp(58,23): error C2724: 'Course::getPrefix': 'static' should not be used on member functions defined at file scope
+C:\Users\dtran668\Desktop\Course.cpp(64,14): error C2511: 'void Course::setCourseName(std::string)': overloaded member function not found in 'Course'
+C:\Users\dtran668\Desktop\Course.h(15): message : see declaration of 'Course'
+C:\Users\dtran668\Desktop\Course.cpp(66,2): error C2597: illegal reference to non-static member 'Course::courseName'
+C:\Users\dtran668\Desktop\Course.h(54): message : see declaration of 'Course::courseName'
+  Generating Code...
